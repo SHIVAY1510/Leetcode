@@ -32,7 +32,7 @@ All Occurrences of 9 have been deleted.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-09T09:48:33.884Z  
+**Submitted:** 2026-10-09T09:48:42.342Z  
 
 ```java
 /*Structure of the doubly linked list  Node
