@@ -16,12 +16,9 @@ class Solution {
 
         while (temp != null) {
 
-            // Check duplicate safely
             if (temp.next != null && temp.val == temp.next.val) {
 
                 int val = temp.val;
-
-                // Remove all nodes having this value
                 while (temp != null && temp.val == val) {
                     temp = temp.next;
 
