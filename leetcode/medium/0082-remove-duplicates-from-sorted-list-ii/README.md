@@ -40,8 +40,8 @@ Output: [2,3]
 
 **Language:** Java  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 44.6 MB (beats 93.61%)  
-**Submitted:** 2026-10-07T05:56:39.599Z  
+**Memory:** 44.8 MB (beats 86.17%)  
+**Submitted:** 2026-10-09T03:25:55.861Z  
 
 ```java
 /**
@@ -62,12 +62,9 @@ class Solution {
 
         while (temp != null) {
 
-            // Check duplicate safely
             if (temp.next != null && temp.val == temp.next.val) {
 
                 int val = temp.val;
-
-                // Remove all nodes having this value
                 while (temp != null && temp.val == val) {
                     temp = temp.next;
 
