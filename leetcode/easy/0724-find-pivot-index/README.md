@@ -61,28 +61,43 @@ Right sum = nums[1] + nums[2] = 1 + -1 = 0
 ## Solution
 
 **Language:** Java  
-**Runtime:** 314 ms (beats 7.16%)  
-**Memory:** 47.3 MB (beats 77.30%)  
-**Submitted:** 2026-10-12T04:45:01.542Z  
+**Runtime:** 1 ms (beats 95.88%)  
+**Memory:** 47.5 MB (beats 22.86%)  
+**Submitted:** 2026-10-12T05:07:29.253Z  
 
 ```java
 class Solution {
     public int pivotIndex(int[] nums) {
-        int n=nums.length;
-        for(int i=0;i<n;i++){
-            int l=0;
-            int r=0;
-          for(int j=0;j<i;j++){
-            l+=nums[j];
-          }
-          for(int j=i+1;j<n;j++){
-            r+=nums[j];
-          }
-            if(l==r){
-                return i;
-            }
-        }
-       return -1;
+    //     int n=nums.length;
+    //     for(int i=0;i<n;i++){
+    //         int l=0;
+    //         int r=0;
+    //       for(int j=0;j<i;j++){
+    //         l+=nums[j];
+    //       }
+    //       for(int j=i+1;j<n;j++){
+    //         r+=nums[j];
+    //       }
+    //         if(l==r){
+    //             return i;
+    //         }
+    //     }
+    //    return -1;
+    int n=nums.length;
+    int t=0;
+    int l=0;
+    int r=0;
+    for(int i=0;i<n;i++){
+        t+=nums[i];
+    }
+    for(int i=0;i<n;i++){
+        r=t-l-nums[i];
+    if(l==r){
+        return i;
+    }
+    l+=nums[i];
+    }
+    return -1;
     }
 }
 ```
