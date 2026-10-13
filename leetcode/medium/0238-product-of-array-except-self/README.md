@@ -44,8 +44,8 @@ Output: [0,0,9,0,0]
 
 **Language:** Java  
 **Runtime:** 2 ms (beats 91.55%)  
-**Memory:** 72.2 MB (beats 17.61%)  
-**Submitted:** 2026-10-13T04:15:02.616Z  
+**Memory:** 71.9 MB (beats 62.81%)  
+**Submitted:** 2026-10-13T04:45:40.822Z  
 
 ```java
 class Solution {
@@ -63,18 +63,30 @@ class Solution {
     //     ans[i]=p;
     //   }
     //   return ans;
+    // int n=nums.length;
+    // int[] prefix=new int[nums.length];
+    // prefix[0]=1;
+    // int suffix=1;
+    // for(int i=1;i<n;i++){
+    //     prefix[i]=prefix[i-1]*nums[i-1];
+    // }
+    // for(int i=n-2;i>=0;i--){
+    //     suffix*=nums[i+1];
+    //     prefix[i]*=suffix;
+    // }
+    // return prefix;
     int n=nums.length;
-    int[] prefix=new int[nums.length];
-    prefix[0]=1;
-    int suffix=1;
+    int [] a=new int[nums.length];
+    a[0]=1;
     for(int i=1;i<n;i++){
-        prefix[i]=prefix[i-1]*nums[i-1];
+        a[i]=a[i-1]*nums[i-1];
     }
-    for(int i=n-2;i>=0;i--){
-        suffix*=nums[i+1];
-        prefix[i]*=suffix;
+    int suffix=1;
+    for(int i=n-1;i>=0;i--){
+        a[i]=a[i]*suffix;
+        suffix=suffix*nums[i];
     }
-    return prefix;
+    return a;
     }
 }
 ```
