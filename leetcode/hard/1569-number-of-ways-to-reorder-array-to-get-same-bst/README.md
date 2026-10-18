@@ -57,9 +57,9 @@ Explanation: There are no other orderings of nums that will yield the same BST.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 3 ms  
-**Memory:** 41.9 MB  
-**Submitted:** 2026-10-18T17:53:36.489Z  
+**Runtime:** 70 ms (beats 25.55%)  
+**Memory:** 170.1 MB (beats 43.07%)  
+**Submitted:** 2026-10-18T17:53:42.283Z  
 
 ```java
 class Solution {
