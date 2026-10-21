@@ -44,24 +44,34 @@ Explanation: There are no elements to the right of index 0.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 1440 ms (beats 5.25%)  
-**Memory:** 48.7 MB (beats 93.37%)  
-**Submitted:** 2026-10-21T04:48:50.431Z  
+**Runtime:** 2 ms (beats 99.56%)  
+**Memory:** 48.6 MB (beats 93.37%)  
+**Submitted:** 2026-10-21T04:52:37.646Z  
 
 ```java
 class Solution {
     public int[] replaceElements(int[] arr) {
-       int n=arr.length;
-        for(int i=0;i<n;i++){
-            int max=-1;
-            for(int j=i+1;j<n;j++){
-                if(arr[j]>max){
-                    max=arr[j];
-                }
-            }
-            arr[i]=max;
+    //    int n=arr.length;
+    //     for(int i=0;i<n;i++){
+    //         int max=-1;
+    //         for(int j=i+1;j<n;j++){
+    //             if(arr[j]>max){
+    //                 max=arr[j];
+    //             }
+    //         }
+    //         arr[i]=max;
+    //     }
+    //     return arr;
+    int n=arr.length;
+    int max=-1;
+    for(int i=n-1;i>=0;i--){
+        int curr=arr[i];
+        arr[i]=max;
+        if(curr>max){
+            max=curr;
         }
-        return arr;
+    }
+    return arr;
     }
 }
 ```
