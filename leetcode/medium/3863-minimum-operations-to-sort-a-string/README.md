@@ -54,9 +54,9 @@ Return the  **minimum**  number of operations required to make `s` sorted in  **
 ## Solution
 
 **Language:** Java  
-**Runtime:** 12 ms (beats 89.71%)  
-**Memory:** 47.4 MB (beats 92.65%)  
-**Submitted:** 2026-10-21T14:49:43.204Z  
+**Runtime:** 13 ms (beats 89.71%)  
+**Memory:** 47.5 MB (beats 92.65%)  
+**Submitted:** 2026-10-21T14:51:56.268Z  
 
 ```java
 class Solution {
