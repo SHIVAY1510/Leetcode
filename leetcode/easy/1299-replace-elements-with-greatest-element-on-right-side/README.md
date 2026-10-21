@@ -45,8 +45,8 @@ Explanation: There are no elements to the right of index 0.
 
 **Language:** Java  
 **Runtime:** 2 ms (beats 99.56%)  
-**Memory:** 48.6 MB (beats 93.37%)  
-**Submitted:** 2026-10-21T04:52:37.646Z  
+**Memory:** 48.5 MB (beats 95.33%)  
+**Submitted:** 2026-10-21T04:53:46.723Z  
 
 ```java
 class Solution {
