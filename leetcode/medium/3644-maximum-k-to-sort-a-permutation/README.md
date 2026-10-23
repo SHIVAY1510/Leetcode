@@ -54,8 +54,8 @@ Only `k = 0` allows sorting since no greater `k` allows the required swaps where
 
 **Language:** Java  
 **Runtime:** 2 ms (beats 69.77%)  
-**Memory:** 110.1 MB (beats 90.70%)  
-**Submitted:** 2026-10-23T15:29:59.596Z  
+**Memory:** 110.2 MB (beats 86.05%)  
+**Submitted:** 2026-10-23T15:30:35.953Z  
 
 ```java
 class Solution {
