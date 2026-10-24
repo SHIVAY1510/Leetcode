@@ -70,7 +70,7 @@ Return an integer denoting the  **difference**  between the sum of all peak valu
 **Language:** Java  
 **Runtime:** 2 ms  
 **Memory:** 46.1 MB (beats 100.00%)  
-**Submitted:** 2026-10-24T15:58:21.250Z  
+**Submitted:** 2026-10-24T15:59:32.081Z  
 
 ```java
 class Solution {
