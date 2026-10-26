@@ -11,17 +11,13 @@ class Solution {
         //     a.append(ch);
         // }
         // return a.toString();
-        if(strs==null||strs.length==0){
-            return "";
+       String prefix = strs[0];
+    for (String s : strs) {
+        while (!s.startsWith(prefix)) {
+            prefix = prefix.substring(0, prefix.length() - 1);
+            if (prefix.isEmpty()) return "";
         }
-        for(int i=0;i<strs[0].length();i++){
-            char  ch=strs[0].charAt(i);
-            for(int j=0;j<strs.length;j++){
-                if(i>=strs[j].length()||strs[j].charAt(i)!=ch){
-                    return strs[0].substring(0,i);
-                }
-            }
-        }
-        return strs[0];
+    }
+    return prefix;
     }
 }
