@@ -38,9 +38,9 @@ Explanation: There is no common prefix among the input strings.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 1 ms (beats 58.68%)  
-**Memory:** 42.7 MB (beats 91.07%)  
-**Submitted:** 2026-10-26T20:24:01.625Z  
+**Runtime:** 0 ms  
+**Memory:** 42.1 MB  
+**Submitted:** 2026-10-26T20:24:47.229Z  
 
 ```java
 class Solution {
@@ -56,18 +56,14 @@ class Solution {
         //     a.append(ch);
         // }
         // return a.toString();
-        if(strs==null||strs.length==0){
-            return "";
+       String prefix = strs[0];
+    for (String s : strs) {
+        while (!s.startsWith(prefix)) {
+            prefix = prefix.substring(0, prefix.length() - 1);
+            if (prefix.isEmpty()) return "";
         }
-        for(int i=0;i<strs[0].length();i++){
-            char  ch=strs[0].charAt(i);
-            for(int j=0;j<strs.length;j++){
-                if(i>=strs[j].length()||strs[j].charAt(i)!=ch){
-                    return strs[0].substring(0,i);
-                }
-            }
-        }
-        return strs[0];
+    }
+    return prefix;
     }
 }
 ```
