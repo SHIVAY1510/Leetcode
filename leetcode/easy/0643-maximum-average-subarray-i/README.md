@@ -38,24 +38,23 @@ Output: 5.00000
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 44.2 MB  
-**Submitted:** 2026-10-30T04:27:01.076Z  
+**Runtime:** 2691 ms (beats 5.20%)  
+**Memory:** 68.9 MB (beats 94.74%)  
+**Submitted:** 2026-10-30T04:29:21.709Z  
 
 ```java
 class Solution {
     public double findMaxAverage(int[] nums, int k) {
         int n=nums.length;
-        int maxSum=0;
-        double avg=Double.NEGATIVE_INFINITY;
+        int maxSum=Integer.MIN_VALUE;
         for(int i=0;i<=n-k;i++){
             int sum=0;
             for(int j=i;j<i+k;j++){
                 sum+=nums[j];
             }
             maxSum=Math.max(maxSum,sum);
-            avg=(double)maxSum/k;
         }
+            double avg=(double)maxSum/k;
         return avg;
     }
 }
