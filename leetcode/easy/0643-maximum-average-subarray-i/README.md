@@ -39,8 +39,8 @@ Output: 5.00000
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 44.1 MB  
-**Submitted:** 2026-10-30T04:26:45.943Z  
+**Memory:** 44.2 MB  
+**Submitted:** 2026-10-30T04:27:01.076Z  
 
 ```java
 class Solution {
@@ -51,7 +51,7 @@ class Solution {
         for(int i=0;i<=n-k;i++){
             int sum=0;
             for(int j=i;j<i+k;j++){
-                sum+=nums[i];
+                sum+=nums[j];
             }
             maxSum=Math.max(maxSum,sum);
             avg=(double)maxSum/k;
