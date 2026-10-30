@@ -6,7 +6,7 @@ class Solution {
         for(int i=0;i<=n-k;i++){
             int sum=0;
             for(int j=i;j<i+k;j++){
-                sum+=nums[i];
+                sum+=nums[j];
             }
             maxSum=Math.max(maxSum,sum);
             avg=(double)maxSum/k;
