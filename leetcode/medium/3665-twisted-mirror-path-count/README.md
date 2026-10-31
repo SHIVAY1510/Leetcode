@@ -77,9 +77,9 @@ Number	Full Path
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 41.7 MB  
-**Submitted:** 2026-10-31T20:00:24.119Z  
+**Runtime:** 24 ms (beats 100.00%)  
+**Memory:** 283 MB (beats 34.43%)  
+**Submitted:** 2026-10-31T20:00:29.827Z  
 
 ```java
 class Solution {
