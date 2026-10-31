@@ -77,40 +77,32 @@ Number	Full Path
 ## Solution
 
 **Language:** Java  
-**Runtime:** 44 ms (beats 93.44%)  
-**Memory:** 273.6 MB (beats 98.36%)  
-**Submitted:** 2026-10-31T19:59:43.652Z  
+**Runtime:** 0 ms  
+**Memory:** 41.7 MB  
+**Submitted:** 2026-10-31T20:00:24.119Z  
 
 ```java
 class Solution {
     public int uniquePaths(int[][] grid) {
-        int m = grid.length;
+        int m = 1_000_000_007;
         int n = grid[0].length;
-        int mod = 1000000007;
-        int[][] right = new int[m][n];
-        int[][] down = new int[m][n];
-        right[0][0] = 1;
-        for (int i = 0; i < m; i++) {
+        int[] r = new int[n + 1];
+        int[] d = new int[n + 1];
+        r[0] = 1;
+        for (int[] row : grid) {
             for (int j = 0; j < n; j++) {
-                if (grid[i][j] == 0) {
-                    int total = (right[i][j] + down[i][j]) % mod;
-                    if (j + 1 < n) {
-                        right[i][j + 1] =(right[i][j + 1] + total) % mod;
-                    }
-                    if (i + 1 < m) {
-                        down[i + 1][j] =(down[i + 1][j] + total) % mod;
-                    }
+                if (row[j] == 0) {
+                    int c = (d[j + 1] + r[j]) % m;
+                    d[j + 1] = c;
+                    r[j + 1] = c;
                 } else {
-                    if (i + 1 < m) {
-                        down[i + 1][j] =(down[i + 1][j] + right[i][j]) % mod;
-                    }
-                    if (j + 1 < n) {
-                        right[i][j + 1] =(right[i][j + 1] + down[i][j]) % mod;
-                    }
+                    r[j + 1] = d[j + 1];
+                    d[j + 1] = r[j];
                 }
             }
+            r[0] = 0;
         }
-        return (right[m - 1][n - 1] +down[m - 1][n - 1]) % mod;
+        return r[n];
     }
 }
 ```
